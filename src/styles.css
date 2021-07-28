@@ -1,0 +1,156 @@
+body {
+  margin: 2px;
+  background: url(../images/c1.jpg);
+  background-size: 100%;
+}
+
+form {
+  margin: 50px;
+}
+
+.searchForm {
+  width: 100%;
+  text-align: center;
+}
+
+#search {
+  border: none;
+  border-radius: 30px;
+  color: rgb(197, 197, 197);
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  text-indent: 5px;
+  font-size: 15px;
+  min-width: 300px;
+  padding: 10px;
+}
+
+#search:focus {
+  color: black;
+  outline: none;
+}
+
+#searchSubmit {
+  background: transparent;
+  border: transparent;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+#locationButton {
+  width: 100px;
+  height: 42px;
+  cursor: pointer;
+  background: #333;
+  margin: 10px 0 0 30px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+  color: white;
+  font-size: 16px;
+}
+
+#locationButton:hover {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
+    inset -5px -5px 10px #444;
+  font-size: 15px;
+  transition: 500ms;
+  color: #71b7f0;
+  text-shadow: 0px 0px 10px #71b7f0;
+}
+
+#locationButton:focus {
+  outline: none;
+}
+
+.currentCity {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.currentDay {
+  font-size: 20px;
+  margin-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.time {
+  padding-left: 30px;
+}
+
+.currentTemp {
+  text-align: center;
+  font-size: 75px;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.units {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0 0 10px;
+}
+
+#celsius,
+#fahrenheit {
+  text-decoration: none;
+  background-color: transparent;
+  /*color: #a0c0db;*/
+  color: #fee454;
+}
+
+.temp {
+  padding-top: 20px;
+}
+
+.currentCity,
+.currentDay,
+.currentTemp,
+.currentData,
+.time {
+  color: #ffffff;
+}
+
+.currentData {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 20px 1px;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+.six {
+  font-size: 15px;
+}
+
+.col-4 {
+  padding: 0;
+  font-size: 10%;
+}
+
+.first3 {
+  margin-bottom: 20px;
+}
+
+.fiveDays {
+  margin-top: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.Sat,
+.Sun,
+.Mon,
+.Tue,
+.Wed {
+  margin: 0 2px;
+  background: rgba(247, 243, 246, 0.3);
+  min-width: 88px;
+  min-height: 85px;
+}

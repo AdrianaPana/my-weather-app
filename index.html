@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+<link href="src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <form id="searchCity">
+        <div class="searchForm">
+          <input
+            type="text"
+            id="search"
+            placeholder="Enter city name"
+          />
+          <input type="submit" id="searchSubmit" value="🔍" />
+          <button id="locationButton">Current</button>
+        </div>
+      </form>
+
+      <h1 class="currentCity"></h1>
+      <p><span class="currentDay"></span><span class="time"></span></p>
+      <div class="row currentData">
+        <div class="col-6 temp"><span class="currentTemp">🌤 <span class="degrees"></span>°</span><span class="units"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span></div>
+        <div class="col-6 weatherDetails">
+          <div class="row first3">
+            <div class="col-4">
+              <h4>UV Index</h4><span class="six uvIndex"></span>
+            </div>
+            <div class="col-4">
+              <h4>Wind</h4><span class="six wind"></span>
+            </div>
+            <div class="col-4">
+              <h4>Sunrise</h4><span class="six sunrise"></span>
+            </div>
+          </div>
+          <div class="row last3">
+            <div class="col-4">
+              <h4>AQI</h4><span class="six airQuality"></span>
+            </div>
+            <div class="col-4">
+              <h4>Humidity</h4><span class="six humidity"></span>
+            </div>
+            <div class="col-4">
+              <h4>Sunset</h4><span class="six sunset"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row fiveDays">
+        <div class="col Sat">
+          <p>Saturday<br>☀️<br>31°</p>
+        </div>
+        <div class="col Sun">
+          <p>Sunday<br>☀️<br>31°</p>
+        </div>
+        <div class="col Mon">
+          <p>Monday<br>🌦<br>32°</p>
+        </div>
+        <div class="col Tue">
+          <p>Tuesday<br>⛅️<br>28°</p>
+        </div>
+        <div class="col Wed">
+          <p>Wednesday<br>☀️<br>29°</p>
+        </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
