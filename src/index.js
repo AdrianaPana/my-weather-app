@@ -1,27 +1,20 @@
 function updateData(response) {
-    document.querySelector("h1").innerHTML = response.data.name;
-    document.querySelector(".degrees").innerHTML = Math.round(response.data.main.temp);
-    document.querySelector(".humidity").innerHTML = `${response.data.main.humidity}%`;
-    document.querySelector(".wind").innerHTML = `${response.data.wind.speed}Km/h`;
-    /* 
     console.log(response.data);
-    
-    let currentAirQuality = response.data.weather[icon];
-    let airQuality = document.querySelector(".airQuality");
-    airQuality.innerHTML = `${currentAirQuality}`;
-    
-    uvIndex
-
-    sunrise
-
-    sunset
-*/
+    document.querySelector("h1").innerHTML = response.data.name;
+    document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+    document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
+    document.querySelector("#wind").innerHTML = `${response.data.wind.speed} Km/h`;
+    document.querySelector("#feelsLike").innerHTML = `${Math.round(response.data.main.feels_like)}°`;
+    document.querySelector("#description").innerHTML = response.data.weather[0].description;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(event) {
-     event.preventDefault();
+    event.preventDefault();
     let apiKey = "55138790f70e5a564e372b7d10cce5ca";
-    let cityInput = document.querySelector("#search").value;
+    let cityInput = document.querySelector("#city-input").value;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric`;
     axios.get(`${apiUrl}&appid=${apiKey}`).then(updateData);
 }
@@ -40,7 +33,7 @@ function getCurrentLocation() {
 
 function toFahrenheit() {
     if (isCelsius) {
-        let temperature = document.querySelector(".degrees");
+        let temperature = document.querySelector("#temperature");
         let temp = parseInt(temperature.innerHTML);
         let fahrenheit = Math.round((temp *9/5) + 32);
         temperature.innerHTML = fahrenheit;
@@ -50,7 +43,7 @@ function toFahrenheit() {
 
 function toCelsius() {
     if(!isCelsius) {
-        let temperature = document.querySelector(".degrees");
+        let temperature = document.querySelector("#temperature");
         let temp = parseInt(temperature.innerHTML);
         let celsius = Math.round((temp - 32) * (5/9));
         temperature.innerHTML = celsius;
@@ -59,7 +52,7 @@ function toCelsius() {
 }
 
 function initialize() {
-    let form = document.querySelector("#searchCity");
+    let form = document.querySelector("#search-form");
     form.addEventListener("submit", search);
 
     let now = new Date();
@@ -71,24 +64,25 @@ function initialize() {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let month = months[now.getMonth()];
 
-    let date = document.querySelector(".currentDay");
-    date.innerHTML = `${weekDay}, ${month} ${day}`;
-
     let hours = now.getHours();
     let minutes = now.getMinutes();
     if (minutes < 10) {
         minutes = `0${minutes}`;
     }
-    let time = document.querySelector(".time");
-    time.innerHTML = `${hours}:${minutes}`;
+    
+    let date = document.querySelector("#date");
+    date.innerHTML = `${weekDay}, ${month} ${day}`;
 
-    let fahrenheit = document.querySelector("#fahrenheit");
+    let time = document.querySelector("#time");
+    time.innerHTML = `${hours}:${minutes}`;
+    
+    let fahrenheit = document.querySelector("#fahrenheit-link");
     fahrenheit.addEventListener("click",  toFahrenheit);
 
-    let celsius = document.querySelector("#celsius");
+    let celsius = document.querySelector("#celsius-link");
     celsius.addEventListener("click", toCelsius);
 
-    let currentButton = document.querySelector("#locationButton");
+    let currentButton = document.querySelector(".currentLocationBtn");
     currentButton.addEventListener("click", getCurrentLocation);
 }
 
