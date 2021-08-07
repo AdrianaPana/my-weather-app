@@ -1,13 +1,15 @@
 body {
-  background: url(../images/c1.jpg);
+  background: url(../images/a23.jpg);
   background-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 h1 {
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 28px;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
 ul {
@@ -16,12 +18,11 @@ ul {
 }
 
 li {
-  color: white;
   list-style: none;
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 19px;
 }
 
@@ -51,11 +52,9 @@ li:first-letter {
   border-radius: 30px;
   color: rgb(197, 197, 197);
   transition: all 0.2s ease-in-out;
-  font-family: "Montserrat", sans-serif;
   text-indent: 5px;
   font-size: 1rem;
   min-width: 300px;
-  padding: 10px;
 }
 
 #city-input:focus {
@@ -64,6 +63,7 @@ li:first-letter {
 }
 
 #searchSubmit {
+  min-width: 35px;
   background: transparent;
   border: transparent;
   font-size: 30px;
@@ -71,7 +71,7 @@ li:first-letter {
 }
 
 .currentLocationBtn {
-  width: 100px;
+  min-width: 100px;
   height: 42px;
   cursor: pointer;
   background: #333;
@@ -92,34 +92,13 @@ li:first-letter {
     inset -5px -5px 10px #444;
   font-size: 15px;
   transition: 500ms;
-  color: #71b7f0;
-  text-shadow: 0px 0px 10px #71b7f0;
-}
-
-#city {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-}
-
-#date,
-#time,
-#description {
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  color: #809255;
+  text-shadow: 0px 0px 10px #809255;
 }
 
 #time {
   margin-left: 20px;
 }
-
-/*#celsius,
-#fahrenheit {
-  text-decoration: none;
-  background-color: transparent;
-  color: #a0c0db;
-  color: #fee454;
-}*/
 
 #city,
 #date,
@@ -128,11 +107,14 @@ li:first-letter {
 #wind,
 #humidity,
 #feelsLike,
+#signature,
 .weather-temperature {
   color: #ffffff;
 }
 
 .weather-temperature img {
+  background: #8808eb;
+  border-radius: 15px;
   vertical-align: top;
   margin-right: 5px;
   height: 64px;
@@ -140,7 +122,6 @@ li:first-letter {
 }
 
 .weather-temperature strong {
-  color: white;
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
@@ -154,17 +135,14 @@ li:first-letter {
 
 .weather-temperature .active {
   color: white;
-  cursor: default;
 }
 
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
+.details {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .fiveDays {
-  margin-top: 50px;
-  color: #ffffff;
+  margin: 30px 0 10px 0;
   text-align: center;
 }
 
@@ -173,8 +151,19 @@ li:first-letter {
 .Mon,
 .Tue,
 .Wed {
-  margin: 0 2px;
   background: rgba(247, 243, 246, 0.3);
-  min-width: 88px;
+  font-size: 14px;
+  padding-top: 10px;
+  margin: 0 2px;
+  min-width: 90px;
   min-height: 85px;
+}
+
+a {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  text-decoration: none;
+}
+
+#signature {
+  text-align: justify;
 }

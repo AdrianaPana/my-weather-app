@@ -1,9 +1,8 @@
 function updateData(response) {
-    console.log(response.data);
     document.querySelector("h1").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
-    document.querySelector("#wind").innerHTML = `${response.data.wind.speed} Km/h`;
+    document.querySelector("#wind").innerHTML = `${Math.round(response.data.wind.speed)} Km/h`;
     document.querySelector("#feelsLike").innerHTML = `${Math.round(response.data.main.feels_like)}°`;
     document.querySelector("#description").innerHTML = response.data.weather[0].description;
     let iconElement = document.querySelector("#icon");
@@ -11,12 +10,16 @@ function updateData(response) {
     iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function searchCity(city) {
+    let apiKey = "55138790f70e5a564e372b7d10cce5ca";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
+    axios.get(`${apiUrl}&appid=${apiKey}`).then(updateData);
+}
+
 function search(event) {
     event.preventDefault();
-    let apiKey = "55138790f70e5a564e372b7d10cce5ca";
     let cityInput = document.querySelector("#city-input").value;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric`;
-    axios.get(`${apiUrl}&appid=${apiKey}`).then(updateData);
+    searchCity(cityInput);
 }
 
 function retrievePosition(position) {
@@ -35,6 +38,8 @@ function toFahrenheit() {
     if (isCelsius) {
         let temperature = document.querySelector("#temperature");
         let temp = parseInt(temperature.innerHTML);
+        celsiusLink.classList.remove("active");
+        fahrenheitLink.classList.add("active");
         let fahrenheit = Math.round((temp *9/5) + 32);
         temperature.innerHTML = fahrenheit;
         isCelsius = false;
@@ -45,6 +50,8 @@ function toCelsius() {
     if(!isCelsius) {
         let temperature = document.querySelector("#temperature");
         let temp = parseInt(temperature.innerHTML);
+        celsiusLink.classList.add("active");
+        fahrenheitLink.classList.remove("active");
         let celsius = Math.round((temp - 32) * (5/9));
         temperature.innerHTML = celsius;
         isCelsius = true;
@@ -76,17 +83,16 @@ function initialize() {
     let time = document.querySelector("#time");
     time.innerHTML = `${hours}:${minutes}`;
     
-    let fahrenheit = document.querySelector("#fahrenheit-link");
-    fahrenheit.addEventListener("click",  toFahrenheit);
-
-    let celsius = document.querySelector("#celsius-link");
-    celsius.addEventListener("click", toCelsius);
+    fahrenheitLink.addEventListener("click",  toFahrenheit);
+    celsiusLink.addEventListener("click", toCelsius);
 
     let currentButton = document.querySelector(".currentLocationBtn");
     currentButton.addEventListener("click", getCurrentLocation);
 }
 
 let isCelsius = true;
+let celsiusLink = document.querySelector("#celsius-link");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
 
 initialize();
-getCurrentLocation();
+searchCity("New York");
