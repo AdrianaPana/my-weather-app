@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
     <title>Weather</title>
   </head>
   <body>
@@ -46,7 +46,7 @@
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
-              <li><span id="date"></span><span id="time"></span></li>
+              <li>Last updated: <span id="date"></span></li>
               <li id="description"></li>
             </ul>
           </div>
@@ -56,39 +56,19 @@
                 <img src="" alt="Clear" id="icon" class="float-left" />
                 <span class="float-left">
                   <strong id="temperature"></strong>
-                  <span class="units">
-                    <small>
-                      <a href="#" id="celsius-link" class="active">°C</a> |
-                      <a href="#" id="fahrenheit-link">°F</a>
-                    </small>
-                  </span>
+                  <span class="units">°F</span>
                 </span>
               </div>
             </div>
-          <div class="col-6">
-            <ul class="details">
-              <li>Feels like <span id="feelsLike"></span></li>
-              <li>Humidity: <span id="humidity"></span></li>
-              <li>Wind: <span id="wind"></span></li>
-            </ul>
-          </div>
-          <div class="row fiveDays">
-            <div class="col Sat">
-              <p>Saturday<br />☀️<br />31°</p>
-            </div>
-            <div class="col Sun">
-              <p>Sunday<br />☀️<br />31°</p>
-            </div>
-            <div class="col Mon">
-              <p>Monday<br />🌦<br />32°</p>
-            </div>
-            <div class="col Tue">
-              <p>Tuesday<br />⛅️<br />28°</p>
-            </div>
-            <div class="col Wed">
-              <p>Wednesday<br />☀️<br />29°</p>
+            <div class="col-6">
+              <ul class="details">
+                <li>Feels like <span id="feelsLike"></span></li>
+                <li>Humidity: <span id="humidity"></span></li>
+                <li>Wind: <span id="wind"></span></li>
+              </ul>
             </div>
           </div>
+          <div class="weather-forecast" id="forecast"></div>
           <small id="signature">
             This project was coded by Adriana Pana and is
             <a href="https://github.com/AdrianaPana/my-weather-app" id="github"

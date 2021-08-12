@@ -96,24 +96,8 @@ li:first-letter {
   text-shadow: 0px 0px 10px #809255;
 }
 
-#time {
-  margin-left: 20px;
-}
-
-#city,
-#date,
-#time,
-#description,
-#wind,
-#humidity,
-#feelsLike,
-#signature,
-.weather-temperature {
-  color: #ffffff;
-}
-
 .weather-temperature img {
-  background: #8808eb;
+  background: rgb(136, 8, 235, 0.8);
   border-radius: 15px;
   vertical-align: top;
   margin-right: 5px;
@@ -133,37 +117,35 @@ li:first-letter {
   top: -34px;
 }
 
-.weather-temperature .active {
-  color: white;
-}
-
 .details {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.fiveDays {
-  margin: 30px 0 10px 0;
+.weather-forecast {
+  margin: 20px 0 10px 0;
+  background: rgba(136, 8, 235, 0.8);
+  border-radius: 15px;
   text-align: center;
 }
 
-.Sat,
-.Sun,
-.Mon,
-.Tue,
-.Wed {
-  background: rgba(247, 243, 246, 0.3);
-  font-size: 14px;
-  padding-top: 10px;
-  margin: 0 2px;
-  min-width: 90px;
-  min-height: 85px;
+.weather-forecast-date {
+  font-size: 16px;
 }
 
-a {
-  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
-  text-decoration: none;
+.weather-forecast-temperature-min {
+  opacity: 0.7;
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
 }
 
 #signature {
   text-align: justify;
+}
+
+#github,
+#netlify {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  text-decoration: none;
 }
