@@ -121,6 +121,12 @@ li:first-letter {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+#feelsLike,
+#humidity,
+#wind {
+  color: #ec6e4c;
+}
+
 .weather-forecast {
   margin: 20px 0 10px 0;
   background: rgba(136, 8, 235, 0.8);
