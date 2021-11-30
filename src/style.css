@@ -29,7 +29,7 @@ li:first-letter {
 }
 
 .weather-app {
-  background: url(../images/background.jpg);
+  background: url(../images/pexels-anete-lusina-6331042.jpg);
   background-size: 100%;
   max-width: 600px;
   margin: 30px auto;
@@ -123,6 +123,7 @@ li:first-letter {
 
 .weather-forecast {
   margin: 20px 0 10px 0;
+  padding: 5px;
   background: rgba(136, 8, 235, 0.8);
   border-radius: 15px;
   text-align: center;
