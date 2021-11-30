@@ -1,6 +1,4 @@
 body {
-  background: url(../images/a23.jpg);
-  background-size: 100%;
   font-family: "Montserrat", sans-serif;
   color: white;
 }
@@ -30,16 +28,12 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-.weather-app-wrapper {
-  max-width: 600px;
-  margin: 30px auto;
-}
-
 .weather-app {
+  background: url(../images/background.jpg);
+  background-size: 100%;
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px transparent #dadde1;
   border-radius: 5px;
 }
 

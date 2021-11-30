@@ -22,64 +22,64 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <form id="search-form" class="mb-3">
-            <div class="row">
-              <div class="col-8">
-                <input
-                  type="search"
-                  placeholder="Enter city name"
-                  class="form-control"
-                  id="city-input"
-                  autocomplete="off"
-                />
-              </div>
-              <div class="col-1">
-                <input type="submit" id="searchSubmit" value="🔍" />
-              </div>
-              <div class="col-3">
-                <button class="currentLocationBtn">Current</button>
-              </div>
+      <div class="weather-app">
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-8">
+              <input
+                type="search"
+                placeholder="Enter city name"
+                class="form-control"
+                id="city-input"
+                autocomplete="off"
+              />
             </div>
-          </form>
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description"></li>
+            <div class="col-1">
+              <input type="submit" id="searchSubmit" value="🔍" />
+            </div>
+            <div class="col-3">
+              <button class="currentLocationBtn">Current</button>
+            </div>
+          </div>
+        </form>
+        <div class="overview">
+          <h1 id="city"></h1>
+          <ul>
+            <li>Last updated: <span id="date"></span></li>
+            <li id="description"></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix weather-temperature">
+              <img src="" alt="Clear" id="icon" class="float-left" />
+              <span class="float-left">
+                <strong id="temperature"></strong>
+                <span class="units">°F</span>
+              </span>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul class="details">
+              <li>Feels like <span id="feelsLike"></span></li>
+              <li>Humidity: <span id="humidity"></span></li>
+              <li>Wind: <span id="wind"></span></li>
             </ul>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="icon" class="float-left" />
-                <span class="float-left">
-                  <strong id="temperature"></strong>
-                  <span class="units">°F</span>
-                </span>
-              </div>
-            </div>
-            <div class="col-6">
-              <ul class="details">
-                <li>Feels like <span id="feelsLike"></span></li>
-                <li>Humidity: <span id="humidity"></span></li>
-                <li>Wind: <span id="wind"></span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="weather-forecast" id="forecast"></div>
-          <small id="signature">
-            This project was coded by Adriana Pana and is
-            <a href="https://github.com/AdrianaPana/my-weather-app" id="github"
-              >open-sourced on GitHub</a
-            >
-            and
-            <a href="https://my-weather-app-link.netlify.app/" id="netlify"
-              >hosted on Netlify</a
-            >
-          </small>
         </div>
+        <div class="weather-forecast" id="forecast"></div>
+        <small id="signature">
+          This project was coded by Adriana Pana and is
+          <a
+            href="https://github.com/AdrianaPana/weather-app-no-react"
+            id="github"
+            >open-sourced on GitHub</a
+          >
+          and
+          <a href="https://weather-app-no-react.netlify.app/" id="netlify"
+            >hosted on Netlify</a
+          >
+        </small>
       </div>
     </div>
     <script src="src/index.js"></script>
