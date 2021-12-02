@@ -30,7 +30,7 @@ li:first-letter {
 }
 
 #description {
-  text-shadow: 0px 0px 10px #809255;
+  text-shadow: 0px 0px 5px #809255;
 }
 
 .weather-app {
