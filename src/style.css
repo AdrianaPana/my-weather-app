@@ -145,17 +145,17 @@ li:first-letter {
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .weather-forecast-temperature {
   font-size: 13px;
 }
 
-#signature {
-  font-weight: 200px;
-  text-align: justify;
-  padding: 5px;
+.signature {
+  font-size: 14px;
+  text-align: center;
+  margin: 0 10px;
 }
 
 #github,
