@@ -4,6 +4,7 @@ body {
 }
 
 h1 {
+  color: #41903e;
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
@@ -29,12 +30,25 @@ li:first-letter {
 }
 
 .weather-app {
-  background: url(../images/pexels-anete-lusina-6331042.jpg);
-  background-size: 100%;
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
+  display: block;
+  position: relative;
+}
+
+.weather-app::after {
+  content: "";
+  background: url(../images/b6.jpg);
+  background-size: 100%;
   border-radius: 5px;
+  opacity: 0.5;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+  z-index: -1;
 }
 
 .overview {
@@ -42,6 +56,7 @@ li:first-letter {
 }
 
 #city-input {
+  max-width: 50%;
   border: none;
   border-radius: 30px;
   color: rgb(197, 197, 197);
@@ -61,19 +76,17 @@ li:first-letter {
   background: transparent;
   border: transparent;
   font-size: 30px;
-  padding-left: 0;
+  margin: 0 5px;
 }
 
 .currentLocationBtn {
   min-width: 100px;
   height: 42px;
   cursor: pointer;
-  background: #333;
+  background: white;
   border: none;
-  border-radius: 10px;
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
-    inset -5px -5px 10px #222;
-  color: white;
+  border-radius: 30px;
+  color: #41903e;
   font-size: 16px;
 }
 
@@ -91,8 +104,6 @@ li:first-letter {
 }
 
 .weather-temperature img {
-  background: rgb(136, 8, 235, 0.8);
-  border-radius: 15px;
   vertical-align: top;
   margin-right: 5px;
   height: 64px;
@@ -118,13 +129,13 @@ li:first-letter {
 #feelsLike,
 #humidity,
 #wind {
-  color: #ec6e4c;
+  color: #41903e;
 }
 
 .weather-forecast {
   margin: 20px 0 10px 0;
   padding: 5px;
-  background: rgba(136, 8, 235, 0.8);
+  background: rgba(114, 130, 80, 0.8);
   border-radius: 15px;
   text-align: center;
 }
@@ -143,10 +154,12 @@ li:first-letter {
 
 #signature {
   text-align: justify;
+  padding: 5px;
 }
 
 #github,
 #netlify {
-  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  color: #41903e;
+  text-shadow: 0px 0px 5px white;
   text-decoration: none;
 }
