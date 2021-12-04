@@ -24,7 +24,7 @@
     <div class="container">
       <div class="weather-app">
         <form id="search-form" class="mb-3">
-          <div class="row">
+          <div class="row align-items">
             <div class="col-6">
               <input
                 type="search"
@@ -34,10 +34,10 @@
                 autocomplete="off"
               />
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <input type="submit" id="searchSubmit" value="🔍" />
             </div>
-            <div class="col-3">
+            <div class="col-4">
               <button class="currentLocationBtn">Current</button>
             </div>
           </div>
@@ -45,8 +45,8 @@
         <div class="overview">
           <h1 id="city"></h1>
           <ul>
-            <li>Last updated: <span id="date"></span></li>
             <li id="description"></li>
+            <li id="last-updated">Last updated: <span id="date"></span></li>
           </ul>
         </div>
         <div class="row">
