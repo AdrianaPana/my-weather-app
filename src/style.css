@@ -156,10 +156,6 @@ li:first-letter {
   text-align: center;
 }
 
-.weather-forecast-date {
-  font-size: 0.8em;
-}
-
 .weather-forecast-temperature-min {
   opacity: 0.6;
 }
