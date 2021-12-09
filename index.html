@@ -51,17 +51,15 @@
         </div>
         <div class="row">
           <div class="col-6">
-            <div class="clearfix weather-temperature">
-              <img src="" alt="Clear" id="icon" class="float-left" />
-              <span class="float-left">
-                <strong id="temperature"></strong>
-                <span class="units">°F</span>
-              </span>
+            <div class="weather-temperature d-flex flex-start">
+              <img src="" alt="Clear" id="icon" />
+              <span id="temperature"></span>
+              <span class="units">°F</span>
             </div>
           </div>
           <div class="col-6">
             <ul class="details">
-              <li>Feels like <span id="feelsLike"></span></li>
+              <li>Feels like: <span id="feelsLike"></span></li>
               <li>Humidity: <span id="humidity"></span></li>
               <li>Wind: <span id="wind"></span></li>
             </ul>
