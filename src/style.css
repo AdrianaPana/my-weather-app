@@ -116,20 +116,19 @@ li:first-letter {
 .weather-temperature #icon {
   max-height: 4em;
   margin-top: -7px;
-  margin-left: -12px;
+  margin-left: -11px;
 }
 
 .weather-temperature #temperature {
   font-size: min(max(48px, 4vw), 64px);
   line-height: 1;
   font-weight: 400;
-  margin-left: -12px;
+  margin-left: -5px;
 }
 
 .weather-temperature .units {
   vertical-align: top;
   font-size: 1em;
-  top: -37px;
 }
 
 .details {
